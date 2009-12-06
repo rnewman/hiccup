@@ -60,7 +60,7 @@
   (let [[tag id class] (parse-tag-name tag)
         tag-attrs      {:id id
                         :class (when (string? class)
-                                 (let [#^String c]
+                                 (let [#^String c class]
                                    (.replace c "." " ")))}
         map-attrs      (first content)]
     (if (map? map-attrs)
